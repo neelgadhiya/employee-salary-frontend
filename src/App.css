@@ -1,0 +1,169 @@
+/* Same CSS as original HTML, adapted for React */
+body {
+  background: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+input, select, button {
+  transition: all 0.3s ease;
+}
+input:focus, select:focus, button:hover {
+  transform: scale(1.02);
+  background-color: rgba(45, 212, 191, 0.1);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 300px;
+}
+th, td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background: #2dd4bf;
+  color: #1f2937;
+  font-weight: 600;
+}
+th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: #2dd4bf;
+  min-width: 80px;
+}
+td {
+  background: #ffffff;
+}
+td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background: #ffffff;
+  min-width: 80px;
+}
+.month-table {
+  margin-top: 1rem;
+  overflow-x: auto;
+  display: none;
+}
+.month-table.active {
+  display: block;
+}
+select.work-type {
+  min-width: 90px;
+  max-width: 120px;
+  width: 100%;
+  padding: 4px;
+  font-size: 0.75rem;
+  background: #f1f5f9;
+  color: #1f2937;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+input.time-input {
+  width: 100%;
+  padding: 4px;
+  font-size: 0.75rem;
+  background: #f1f5f9;
+  color: #1f2937;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+.holiday {
+  background: #d1d5db;
+  color: #6b7280;
+}
+.department-section {
+  margin-bottom: 1rem;
+}
+.month-button, .dept-button {
+  cursor: pointer;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 6px;
+  background: #e5e7eb;
+  transition: background-color 0.2s;
+}
+.month-button:hover, .dept-button:hover {
+  background: #2dd4bf;
+  color: #1f2937;
+}
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #2dd4bf;
+  color: #1f2937;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .month-table th, .month-table td {
+    font-size: 0.7rem;
+    padding: 4px;
+  }
+  th:first-child, td:first-child {
+    min-width: 60px;
+  }
+  select.work-type, input.time-input {
+    font-size: 0.65rem;
+    padding: 2px;
+  }
+  .grid-cols-1 md\\:grid-cols-3, .grid-cols-1 md\\:grid-cols-4, .grid-cols-1 md\\:grid-cols-5 {
+    grid-template-columns: 1fr;
+  }
+  .glass {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.125rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .month-table th, .month-table td {
+    font-size: 0.65rem;
+    padding: 3px;
+  }
+  th:first-child, td:first-child {
+    min-width: 50px;
+  }
+  select.work-type, input.time-input {
+    font-size: 0.6rem;
+    padding: 2px;
+  }
+  button {
+    font-size: 0.85rem;
+  }
+}
